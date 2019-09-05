@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+
+***********************************************************************************************
+website.publishproj
+
+WARNING: DO NOT MODIFY this file, it is used for the web publish process.
+
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+***********************************************************************************************
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.30319</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{979fa735-7648-43ba-a4b5-0847346d9672}</ProjectGuid>
+    <SourceWebPhysicalPath>$(MSBuildThisFileDirectory)</SourceWebPhysicalPath>
+    <SourceWebVirtualPath>/CEP.Www</SourceWebVirtualPath>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <SourceWebProject>http://localhost/WS_CEP</SourceWebProject>
+    <SourceWebMetabasePath>/LM/W3SVC/1/ROOT/WS_CEP</SourceWebMetabasePath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <!-- for VS2010 we need to use 10.5 but for VS2012+ we should use VisualStudioVersion -->
+    <WebPublishTargetsVersion Condition=" '$(WebPublishTargetsVersion)' =='' and '$(VisualStudioVersion)' == 10.0 ">10.5</WebPublishTargetsVersion>
+    <WebPublishTargetsVersion Condition=" '$(WebPublishTargetsVersion)'=='' ">$(VisualStudioVersion)</WebPublishTargetsVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(WebPublishTargetsVersion)</VSToolsPath>
+    <_WebPublishTargetsPath Condition=" '$(_WebPublishTargetsPath)'=='' ">$(VSToolsPath)</_WebPublishTargetsPath>
+    <AssemblyFileVersion Condition="'$(AssemblyFileVersion)' == ''">1.0.0.0</AssemblyFileVersion>
+    <AssemblyVersion Condition="'$(AssemblyVersion)' == ''">1.0.0.0</AssemblyVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <AssemblyAttributes Include="AssemblyFileVersion">
+      <Value>$(AssemblyFileVersion)</Value>
+    </AssemblyAttributes>
+    <AssemblyAttributes Include="AssemblyVersion">
+      <Value>$(AssemblyVersion)</Value>
+    </AssemblyAttributes>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\..\..\..\APB.Framework\Main\Source\APB.Framework\Framework.Database\APB.Framework.DataBase.csproj">
+      <Project>{782270CA-BD20-44D8-A38E-EF6ADA892DF6}</Project>
+      <Name>APB.Framework.DataBase</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\..\..\..\APB.Framework\Main\Source\APB.Framework\Framework.Encryption\APB.Framework.Encryption.csproj">
+      <Project>{B5FF0D10-8FC4-4A54-83FF-E2FEA919645D}</Project>
+      <Name>APB.Framework.Encryption</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\..\..\..\APB.Framework\Main\Source\APB.Framework\Framework.IO\APB.Framework.IO.csproj">
+      <Project>{E7C07BE0-7E42-460F-81D5-3AD039D3B652}</Project>
+      <Name>APB.Framework.IO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\..\..\..\APB.Framework\Main\Source\APB.Framework\Framework.Mail\APB.Framework.Mail.csproj">
+      <Project>{FFF8683A-17F3-4120-85DD-AB9407403FFF}</Project>
+      <Name>APB.Framework.Mail</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\..\..\..\APB.Framework\Main\Source\APB.Framework\Framework.Math\APB.Framework.Math.csproj">
+      <Project>{226C13E7-F095-44C3-8B9A-D2854C849968}</Project>
+      <Name>APB.Framework.Math</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\..\..\..\APB.Framework\Main\Source\APB.Framework\Framework.Text\APB.Framework.Text.csproj">
+      <Project>{3228C7EA-12F9-4220-AD44-C5873DD2D9E5}</Project>
+      <Name>APB.Framework.Text</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Mercury.DataObjects\DataObjects.Base\APB.Mercury.Fork.CMT.DataObjects.Base.csproj">
+      <Project>{9CBB38DD-B9A3-4ED0-833B-C495E888F2B2}</Project>
+      <Name>APB.Mercury.Fork.CMT.DataObjects.Base</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Mercury.DataObjects\DataObjects.WebServiceCEP\APB.Mercury.DataObjects.WebServiceCEP.csproj">
+      <Project>{15A4EE7D-3A66-45AA-A7E0-E626BE05E608}</Project>
+      <Name>APB.Mercury.DataObjects.WebServiceCEP</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Mercury.Globalization\APB.Mercury.Globalization.csproj">
+      <Project>{CD290682-6665-4114-A428-8C981B75CD20}</Project>
+      <Name>APB.Mercury.Globalization</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Mercury.Library\APB.Mercury.Library.csproj">
+      <Project>{61973949-4D02-4CB0-9786-AE337B3B7843}</Project>
+      <Name>APB.Mercury.Library</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(_WebPublishTargetsPath)\Web\Microsoft.WebSite.Publishing.targets" />
+</Project>

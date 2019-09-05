@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<versions>
+
+  <!--  
+    Script type definition:
+      DDL = $/APB.Mercury.Database/Oracle/DDL | $/APB.Mercury.Database/SQL/DDL
+      DML = $/APB.Mercury.Database/Oracle/DML | $/APB.Mercury.Database/SQL/DML
+      FUNCTION = $/APB.Mercury.Database/Oracle/Functions | $/APB.Mercury.Database/SQL/Functions
+      PROCEDURE = $/APB.Mercury.Database/Oracle/Procedures | $/APB.Mercury.Database/SQL/Procedures
+      VIEW = $/APB.Mercury.Database/Oracle/Views | $/APB.Mercury.Database/SQL/Views
+      TRIGGER = $/APB.Mercury.Database/Oracle/Triggers | $/APB.Mercury.Database/SQL/Triggers   
+  -->
+
+  <version number="15.10.01">
+    <tasks>
+      <task ID="1001203" release="1"  date="01/10/2015">[P2014-085] 1a Via VT nas Empresas</task>
+    </tasks>
+    <scripts>
+      <script type="DDL" id="01.1600 - 20150615 - CORE - Web Client - Alteração tabelas TRANSPORTPROVIDERS e CARDORDERMT.sql" version=""></script>
+      <script type="DDL" id="01.1610 - 20150728 - CORE - Web Client - Criação tabela PROVIDERUPLOADRECEIVER e Alteração tabelas PROVIDERUPLOAD e PROVIDERADDRESSES.sql" version=""></script>
+      <script type="DDL" id="01.1625 - 20150903 - CORE - Web Client - Alteração tabela PROVIDERADDRESSES alteração coluna PRVADD_SEQNBR.sql" version=""></script>
+      <script type="DDL" id="02.13039 - 20150814 - Primeira via de VT nas empresas.sql" version=""></script>
+      <script type="DDL" id="02.13040 - 20150831 - Primeira via de VT nas empresas.sql" version=""></script>
+      <script type="DDL" id="02.13041 - 20150923 - Primeira via de VT nas empresas.sql" version=""></script>
+
+      <script type="FUNCTION" id="VTWEB_GETUSERRANKEDBYCARD" version="15.001"></script>
+      <script type="FUNCTION" id="VTWEB_GETUSERRANKEDBYTYPE" version="15.001"></script>
+
+      <script type="PROCEDURE" id="UPD_PROVIDERUPLOAD" version="15.001"></script>
+      <script type="PROCEDURE" id="WADM_VALIDATEIMPORTUSER" version="15.001"></script>
+      <script type="PROCEDURE" id="WS_CEP_GETNEWADDRESSES" version="15.002"></script>
+      <script type="PROCEDURE" id="INS_PROVIDERUPLOADLINEERROR" version="13.001"></script>
+
+      <script type="VIEW" id="VW_RPT_CARDCOURIER" version="15.001"></script>
+      <script type="VIEW" id="VW_RPTPRODUCTTYPE" version="15.001"></script>
+      <script type="VIEW" id="VW_VTWEB_GETCARDDESIGNRANK" version="15.002"></script>
+      <script type="VIEW" id="VW_VTWEB_GETUSERTYPERANK" version="15.001"></script>
+
+    </scripts>
+  </version>
+  
+  <version number="11.04.01" date="26/04/2011 15:17">
+
+    <OS>
+      Agrupado os ceps para não duplicar na exibição
+    </OS>
+
+    <scripts>
+      <script type="PROCEDURE"  id="WS_CEP_FINDLOGRADOURO.PLB"            version="11004"></script>
+    </scripts>
+
+  </version>
+
+  <version number="11.02.01" date="22/02/2011 09:37">
+
+    <tasks>
+      <task ID="12811">Desenvolvimento do WebService CEP</task>
+    </tasks>
+
+    <scripts>
+      <script type="PROCEDURE"  id="WS_CEP_FINDLOGRADOURO.PLB"            version="11001"></script>
+      <script type="PROCEDURE"  id="WS_CEP_GETCEP.PLB"                    version="11001"></script>      
+    </scripts>
+
+  </version>
+  
+  
+</versions>
